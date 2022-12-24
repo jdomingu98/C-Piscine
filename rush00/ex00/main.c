@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: atrujill <atrujill@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/12 11:00:34 by atrujill          #+#    #+#             */
+/*   Updated: 2022/02/13 19:07:08 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	rush(int x, int y);
 
-void	ft_print_alphabet(void)
+int	main(void)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
-}
-
-/*int	main(void)
-{
-	ft_print_alphabet();
+	rush("holaquetal", 4);
 	return (0);
-}*/
+}

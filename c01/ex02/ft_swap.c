@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/17 10:22:53 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/17 10:39:45 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include<stdio.h>
 
-void	ft_print_alphabet(void)
+void	ft_swap(int *a, int *b)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
-/*int	main(void)
+/*
+int main(void)
 {
-	ft_print_alphabet();
-	return (0);
+    int a;
+    int b;
+
+    a = 3;
+    b = 4;
+    printf("a: %d, b: %d\n", a, b);
+    ft_swap(&a, &b);
+    printf("a: %d, b: %d\n", a, b);
+    return (0);
 }*/

@@ -1,2 +1,28 @@
-# 42-C-Piscine
-The exercises I made after the February 2022 C Piscine
+# C-Piscine
+
+| Subject | Mark  |
+|   ---:  | :---: |
+| Shell00 |  100  |
+| Shell01 |   70  |
+|   C00   |  100  |
+|   C01   |  100  |
+|   C02   |   85  |
+|   C03   |  100  |
+|   C04   |  100  |
+|   C05   |  100  |
+|   C06   |  100  |
+|   C07   |   -   |
+|   C08   |   -   |
+|   C09   |   -   |
+|   C10   |   -   |
+|   C11   |   -   |
+|   C12   |   -   |
+|   C13   |   -   |
+| RUSH00  |  100  |
+| RUSH01  |    0  |
+| RUSH02  |    0  |
+| EXAM00  |  100  |
+| EXAM01  |   80  |
+| EXAM02  |   ?   |
+| EXAM03  |   ?   |
+|   BSQ   |   -   |

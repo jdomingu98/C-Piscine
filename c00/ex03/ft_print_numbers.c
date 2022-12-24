@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/11 13:17:13 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/11 13:29:09 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	write(1, "0123456789", 10);
 }
 
 /*int	main(void)
 {
-	ft_print_alphabet();
+	ft_print_numbers();
 	return (0);
 }*/

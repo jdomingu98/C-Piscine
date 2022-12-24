@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/17 11:27:31 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/19 19:02:07 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include<stdio.h>
 
-void	ft_print_alphabet(void)
+int	ft_str_is_numeric(char *str)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= '0' && str[i] <= '9')
+			i++;
+		else
+			return (0);
+	}
+	return (1);
 }
 
 /*int	main(void)
 {
-	ft_print_alphabet();
+	char a[] = "HolaBuenasEsteNoEsValido";
+	if(ft_str_is_numeric(a) == 1)
+		printf("El string es valido");
+	else
+		printf("El string NO es valido");
 	return (0);
 }*/

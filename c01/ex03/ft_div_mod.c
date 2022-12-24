@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/17 10:23:40 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/17 10:41:05 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <stdio.h>
 
-void	ft_print_alphabet(void)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	if (b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
 }
 
-/*int	main(void)
+/*
+int main(void)
 {
-	ft_print_alphabet();
-	return (0);
+    int a;
+    int b;
+    int x;
+    int y;
+    int *div = &x;
+    int *mod = &y;
+
+    a = 3;
+    b = 3;
+    ft_div_mod(a, b, div, mod);
+    printf("Division: %d, Modulo: %d", x, y);
+    return (0);
 }*/

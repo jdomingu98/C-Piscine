@@ -1,24 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/19 16:31:02 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/21 16:02:38 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_putchar(char c)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	write(1, &c, 1);
+}
+
+void	ft_putstr_non_printable(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < 32 || str[i] == 127)
+		{
+			ft_putchar('\\');
+			ft_putchar("0123456789abcdef"[str[i] / 16]);
+			ft_putchar("0123456789abcdef"[str[i] % 16]);
+		}
+		else
+			ft_putchar(str[i]);
+		i++;
+	}
 }
 
 /*int	main(void)
 {
-	ft_print_alphabet();
+	ft_putstr_non_printable("Coucou\ntu vas bien ?");
 	return (0);
 }*/

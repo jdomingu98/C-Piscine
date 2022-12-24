@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/22 14:43:30 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/22 14:44:21 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int	ft_is_prime(int nb)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int	i;
+
+	i = 2;
+	if (nb < 2)
+		return (0);
+	while (i < nb)
+	{
+		if (nb % i == 0)
+			return (0);
+		i++;
+	}
+	return (1);
 }
 
-/*int	main(void)
+/*#include<stdio.h>
+int main(void)
 {
-	ft_print_alphabet();
-	return (0);
+    int b = ft_is_prime(17);
+    if(b == 1)
+        printf("No sera usted acertador de primos");
+    else
+        printf("Me da a mi que ese no es de ser primo");
+    return (0);
 }*/

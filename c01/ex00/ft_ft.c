@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/15 19:43:52 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/17 10:22:44 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-void	ft_print_alphabet(void)
+void	ft_ft(int *nbr)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	*nbr = 42;
 }
 
 /*int	main(void)
 {
-	ft_print_alphabet();
-	return (0);
+	int	nbr;
+
+	ft_ft(&nbr);
+	printf("%d", nbr);
 }*/

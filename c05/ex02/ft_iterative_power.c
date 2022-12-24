@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/22 14:33:54 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/22 14:37:45 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int	ft_iterative_power(int nb, int power)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int	res;
+
+	res = 1;
+	if (power < 0)
+		return (0);
+	while (power > 0)
+	{
+		res *= nb;
+		power--;
+	}
+	return (res);
 }
-
-/*int	main(void)
+/*#include<stdio.h>
+int main(void)
 {
-	ft_print_alphabet();
-	return (0);
+    printf("%i", ft_iterative_power(2,3));
+    return (0);
 }*/

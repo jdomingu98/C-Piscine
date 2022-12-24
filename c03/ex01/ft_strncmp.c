@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/22 12:15:44 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/23 20:11:36 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include<stdio.h>
 
-void	ft_print_alphabet(void)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	unsigned int	i;
+
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	{
+		if (s1[i] > s2[i])
+			return (1);
+		else if (s2[i] > s1[i])
+			return (-1);
+		i++;
+	}
+	return (0);
 }
 
-/*int	main(void)
+/*int main(void)
 {
-	ft_print_alphabet();
+	int i = ft_strncmp("hola", "hxla", 1);
+	if (i > 0)
+		printf("Gana hola");
+	else if (i < 0)
+		printf("Gana hxla");
+	else
+		printf("Son iguales");
 	return (0);
 }*/

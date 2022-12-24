@@ -1,24 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/17 11:00:04 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/21 16:04:02 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<stdio.h>
 
-void	ft_print_alphabet(void)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	unsigned int	i;
+
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
 
 /*int	main(void)
 {
-	ft_print_alphabet();
-	return (0);
+    unsigned int n = 3;
+    char origen[] = "Hello World!";
+    char destino[] = "aa";
+
+    printf("%s\n", destino);
+    ft_strncpy(destino, origen, n);
+    printf("%s\n", destino);
+    return (0);
 }*/

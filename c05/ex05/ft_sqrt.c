@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/22 14:41:46 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/03/01 13:33:01 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+//Calculado por el algoritmo babilonico (mirar Wikipedia)
+int	ft_sqrt(int nb)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int	b;
+	int	h;
+
+	if (nb <= 0)
+		return (0);
+	else
+	{
+		h = nb;
+		b = 0;
+		while (b != h)
+		{
+			b = h;
+			h = ((nb / h) + h) / 2;
+		}
+		if (h * h == nb)
+			return (h);
+		else
+			return (0);
+	}
 }
 
-/*int	main(void)
+/*#include<stdio.h>
+int	main(void)
 {
-	ft_print_alphabet();
+	printf("%i\n", ft_sqrt(6486437));
 	return (0);
 }*/

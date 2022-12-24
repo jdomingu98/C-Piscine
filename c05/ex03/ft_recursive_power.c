@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdomingu <jdomingu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 12:47:40 by jdomingu          #+#    #+#             */
-/*   Updated: 2022/02/15 12:31:40 by jdomingu         ###   ########.fr       */
+/*   Created: 2022/02/22 14:37:56 by jdomingu          #+#    #+#             */
+/*   Updated: 2022/02/22 14:38:27 by jdomingu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int	ft_recursive_power(int nb, int power)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	if (power == 0)
+		return (1);
+	else if (power < 0)
+		return (0);
+	else
+		return (nb * ft_recursive_power(nb, power - 1));
 }
-
-/*int	main(void)
+/*#include<stdio.h>
+int main(void)
 {
-	ft_print_alphabet();
-	return (0);
+    printf("%i", ft_recursive_power(2,3));
+    return (0);
 }*/
